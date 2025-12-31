@@ -73,7 +73,7 @@ export function WritingEditor({ question, user, onExit }: WritingEditorProps) {
     // 获取范文
     const handleGetSample = async () => {
         const res = await generateSampleAction(question.content)
-        if (res.success) setSample(res.data)
+        if (res.success) setSample(res.data ?? null)
         else toast.error("Failed to generate sample")
     }
 
