@@ -31,7 +31,7 @@ export function StreakModal({ isOpen, onClose, streakDays, isCheckedToday, onChe
         onCheckIn()
     }
 
-    const springConfig = { type: "spring", stiffness: 300, damping: 20 }
+    const springConfig = { type: "spring" as const, stiffness: 300, damping: 20 }
 
     return (
         <AnimatePresence>
